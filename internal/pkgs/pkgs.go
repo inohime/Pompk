@@ -38,25 +38,6 @@ const (
 	// </div>
 	pkgNameTag = "#pdownload h2"
 
-	// # Selector for the mirror URL to download a package from
-	//
-	// <div class="cardleft">
-	// 	...
-	// 		<li>
-	// 			<a href={ Package Download URL }>{ Mirror URL }</a>
-	//		</li>
-	// 	...
-	// </div>
-	// mirrorTag = ".cardleft li a"
-	// mirrorTag = "#content li a"
-
-	// Recently, libssl3 updated to deb12u2, breaking
-	// the mirrorTag search (there are no mirrors, only security).
-	// Currently, there seems to be only one <li><a> tag in the
-	// #content div for the download and
-	// .cardleft doesn't exist for security pages (supposedly).
-	// securityTag = "#content li a"
-
 	// # Selector for the URL to download a package from
 	//
 	// (not to be confused with dlTag), used in seekDownloadURL

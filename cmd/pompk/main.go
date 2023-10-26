@@ -16,14 +16,18 @@ func main() {
 
 	flags := cli.ParseFlags(currDir)
 
-	if flags.GetOutputPath() == currDir {
-		outPath, err := app.SetupDirectory(currDir, flags.GetPackageName())
-		if err != nil {
-			log.Fatalln("Failed to setup directory:", err)
-		}
-
-		flags.SetOutputPath(outPath)
+	// Redirect currDir to the CLI input path
+	// should it be set
+	if flags.GetOutputPath() != currDir {
+		currDir = flags.GetOutputPath()
 	}
+
+	outPath, err := app.SetupDirectory(currDir, flags.GetPackageName())
+	if err != nil {
+		log.Fatalln("Failed to setup directory:", err)
+	}
+
+	flags.SetOutputPath(outPath)
 
 	app.Run(flags)
 
