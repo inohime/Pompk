@@ -126,6 +126,8 @@ func (pc *PackageContext) Seek(safeDoc *utils.SafeQuery, swg *sync.WaitGroup) {
 		return
 	}
 
+	pc.Shortcake.Add(pkgName)
+
 	go pc.seekDownloadURL(safeDoc)
 
 	packages := getAllPackages(safeDoc, pc.Flags.IsLibcAllowed())
