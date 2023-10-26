@@ -1,3 +1,6 @@
 cmd/pompk/.fastest_main1023.go
 internal/pkgs/.latest_x(might be missing changes from x).go
 internal/pkgs/.x_fixes_libssl3.go
+
+.vscode
+expected-wpasupplicant
