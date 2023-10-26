@@ -36,7 +36,7 @@ func Run(flags *cli.Flags) {
 
 				case err := <-pf.QQ:
 					if err != nil {
-						log.Fatalln("An error has occured:", err)
+						log.Fatalln("An error has occurred:", err)
 					}
 
 				case <-pf.Signal:

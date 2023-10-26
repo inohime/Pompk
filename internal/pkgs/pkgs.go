@@ -247,7 +247,7 @@ func (pc *PackageContext) seekDownloadURL(safeDoc *utils.SafeQuery) {
 
 // GetAllPackages returns packages that satisfy the following process
 //
-//  1. Finds all elements that satisfy the depedency tag selector
+//  1. Finds all elements that satisfy the dependency tag selector
 //  2. Removes elements that don't match the package requirement type
 //  3. Next func gets the sibling element which would be:
 //
