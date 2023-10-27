@@ -95,7 +95,7 @@ func TestSeek(t *testing.T) {
 	for _, file := range files {
 		filePath := fmt.Sprintf("%s/%s", dir, file)
 		if _, err := os.Stat(filePath); os.IsNotExist(err) {
-			t.Fatalf("File does not exist: %v, found: %s", err, "")
+			t.Fatalf("Expected file does not exist: %s, %v\n", file, err)
 		}
 		t.Log("found file:", file)
 	}
