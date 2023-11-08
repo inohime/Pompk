@@ -142,7 +142,9 @@ func (pc *PackageContext) Seek(safeDoc *utils.SafeQuery, swg *sync.WaitGroup) {
 			defer swg.Done()
 
 			nextPkgURL := fmt.Sprintf(
-				"https://packages.debian.org/bookworm/amd64/%s",
+				"https://packages.debian.org/%s/%s/%s",
+				pc.Flags.GetVersion(),
+				pc.Flags.GetArch(),
 				s.Text(),
 			)
 
