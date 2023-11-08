@@ -63,7 +63,7 @@ func TestSeek(t *testing.T) {
 	pf.Signal <- struct{}{}
 
 	if qq != nil {
-		t.Fatal("An error has occured:", qq)
+		t.Fatal("An error has occurred:", qq)
 	}
 
 	f, err := os.Open(dir)
